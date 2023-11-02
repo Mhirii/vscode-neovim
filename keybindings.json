@@ -1,4 +1,3 @@
-// Place your key bindings in this file to override the defaultsauto[]
 [
   {
     "key": "ctrl+o ctrl+g",
@@ -18,18 +17,23 @@
     "command": "undo_expand_region",
     "when": "editorTextFocus && editorHasSelection"
   },
-  // {
-  // "key": "alt+i",
-  // "command": "turboConsoleLog.displayLogMessage"
-  // },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.files.action.focusfilesexplorer",
+    "when": "editortextfocus"
+  },
   {
     "key": "ctrl+e",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "ctrl+e",
-    "command": "workbench.files.action.focusFilesExplorer",
-    "when": "editorTextFocus"
+    "key": "ctrl+Alt+e",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "ctrl+Alt+e",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "editortextfocus"
   },
   {
     "key": "a",
@@ -57,8 +61,19 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "alt+space",
+    "key": "shift+space",
     "command": "whichkey.show",
     "when": "editorTextFocus"
   },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusNextGroup",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+{
+    "command": "vscode-neovim.send",
+    "key": "ctrl+g",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<C-g>"
+}
 ]

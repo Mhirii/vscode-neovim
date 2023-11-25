@@ -24,8 +24,10 @@ bind("x", "<C-l>", '<CMD>call VSCodeNotify("workbench.action.navigateRight")<CR>
 bind("n", "<S-w>", '<CMD>call VSCodeNotify("workbench.action.closeActiveEditor")<CR>')
 -- bind('n', '<Tab>', '<CMD>call VSCodeNotify("workbench.action.nextEditor")<CR>')
 -- bind('n', '<S-Tab>', '<CMD>call VSCodeNotify("workbench.action.previousEditor")<CR>')
-bind("n", "<S-h>", '<CMD>call VSCodeNotify("workbench.action.moveEditorLeftInGroup")<CR>')
-bind("n", "<S-l>", '<CMD>call VSCodeNotify("workbench.action.moveEditorRightInGroup")<CR>')
+-- bind("n", "<S-h>", '<CMD>call VSCodeNotify("workbench.action.moveEditorLeftInGroup")<CR>')
+-- bind("n", "<S-l>", '<CMD>call VSCodeNotify("workbench.action.moveEditorRightInGroup")<CR>')
+bind("n", "<S-h>", '<CMD>call VSCodeNotify("workbench.action.previousEditorInGroup")<CR>')
+bind("n", "<S-l>", '<CMD>call VSCodeNotify("workbench.action.nextEditorInGroup")<CR>')
 
 -- Toggles
 -- bind('n', '<LEADER>e', '<CMD>call VSCodeNotify("workbench.action.toggleSidebarVisibility")<CR>')

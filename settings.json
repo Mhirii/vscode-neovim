@@ -153,12 +153,11 @@
     "zenMode.fullScreen": true,
     "zenMode.hideActivityBar": true,
     "zenMode.hideStatusBar": false,
-    "zenMode.hideTabs": false,
     "zenMode.silentNotifications": true,
     "zenMode.restore": true,
-    "editor.fontFamily": "JetbrainsMono Nerd , Hack, 'FiraCode Nerd Font', 'monospace', monospace",
-    "editor.fontLigatures": false,
-    "editor.fontSize": 16,
+    "editor.fontFamily": "'Monaspace Neon', monospace ,JetbrainsMono Nerd , Hack, 'FiraCode Nerd Font', 'monospace', monospace",
+    // "editor.fontLigatures": true,
+    "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
     "editor.fontWeight": "500",
     "editor.lineHeight": 30,
     "editor.wordWrap": "on",
@@ -193,8 +192,12 @@
     "typescript.referencesCodeLens.showOnAllFunctions": true,
     "typescript.suggest.autoImports": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
+    "[javascript]": {
+        "editor.maxTokenizationLineLength": 2500,
+        "editor.defaultFormatter": "biomejs.biome"
+    },
     "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "biome_lsp.trace.server": "messages",
     "cSpell.userWords": [
@@ -222,6 +225,7 @@
     /*                                 Extensions                                 */
     /* ────────────────────────────────────────────────────────────────────────── */
     "extensions.ignoreRecommendations": false,
+    "unocss.root": "packages/client",
     /* ───────────────────────────── Project Manager ──────────────────────────── */
     "projectManager.git.baseFolders": [
         "/home/mhiri/code",
@@ -235,6 +239,7 @@
         "/home/mhiri/code",
         "/home/mhiri/projects",
         "/home/mhiri/Documents",
+        "/home/mhiri/.config/ags"
     ],
     "projectManager.any.maxDepthRecursion": 1,
     "projectManager.git.MaxDepthRecursion": 4,
@@ -343,6 +348,12 @@
                     "name": "Quick Fix",
                     "type": "command",
                     "command": "editor.action.quickFix"
+                },
+                {
+                    "key": "e",
+                    "name": "Explain",
+                    "type": "command",
+                    "command": "codeium.explainCodeBlock"
                 },
                 {
                     "key": "f",
@@ -1096,5 +1107,17 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "console-ninja.featureSet": "Community",
+    "workbench.sideBar.location": "right",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "vite.browserType": "system",
+    "vite.devCommand": "pnpm dev --host",
+    "browse-lite.chromeExecutable": "/usr/bin/chromium",
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    },
+    "remote.SSH.enableRemoteCommand": true,
     /* ────────────────────────────────────────────────────────────────────────── */
 }

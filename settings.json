@@ -5,10 +5,11 @@
     /*                                   Editor                                   */
     /* ────────────────────────────────────────────────────────────────────────── */
     "editor.codeActionsOnSave": {
-        "source.addMissingImports": true,
-        "source.organizeImports": true,
-        "source.organizeImports.biome": true,
-        "quickfix.biome": true
+        "source.fixAll": "never",
+        "source.addMissingImports": "explicit",
+        "source.organizeImports": "never",
+        "source.organizeImports.biome": "explicit",
+        "quickfix.biome": "explicit"
     },
     "editor.formatOnSave": true,
     "editor.lineNumbers": "relative",
@@ -17,8 +18,19 @@
     "editor.stickyScroll.enabled": true,
     "editor.suggest.insertMode": "replace",
     "editor.tabSize": 2,
-    "workbench.startupEditor": "none",
     "security.workspace.trust.untrustedFiles": "open",
+    "breadcrumbs.enabled": false,
+    "explorer.compactFolders": false,
+    "editor.inlayHints.enabled": "on",
+    "diffEditor.wordWrap": "off",
+    "editor.guides.indentation": false,
+    "editor.guides.bracketPairs": false,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "window.titleBarStyle": "native",
+    "window.enableMenuBarMnemonics": false,
+    "window.menuBarVisibility": "hidden",
+    "workbench.sideBar.location": "right",
     /* ────────────────────────────────────────────────────────────────────────── */
     /*                                 Appearance                                 */
     /* ────────────────────────────────────────────────────────────────────────── */
@@ -30,7 +42,7 @@
             "editorIndentGuide.background1": "#33467C01",
             "editorIndentGuide.activeBackground1": "#363B5490",
             "statusBarItem.offlineBackground": "#f7768e"
-        }
+        },
     },
     "editor.semanticTokenColorCustomizations": {
         "[Tokyo Night Frameless]": {
@@ -39,6 +51,14 @@
                 "keyword": {
                     "fontStyle": "bold"
                 },
+            }
+        },
+        "[Dark Decay]": {
+            "enabled": true,
+            "rules": {
+                "keyword": {
+                    "fontStyle": "bold"
+                }
             }
         }
     },
@@ -128,8 +148,6 @@
             }
         ]
     },
-    /* ─────────────────────────────────── UI ─────────────────────────────────── */
-    "window.menuBarVisibility": "toggle",
     "workbench.iconTheme": "a-file-icon-vscode",
     "material-icon-theme.folders.theme": "specific",
     "a-file-icon-vscode.activeIconPacks": [
@@ -147,6 +165,7 @@
     "a-file-icon-vscode.folderTheme": "specific",
     "a-file-icon-vscode.opacity": 1,
     "a-file-icon-vscode.saturation": 1,
+    "workbench.colorTheme": "Dark Decay",
     /* ─────────────────────────────────── Zen ────────────────────────────────── */
     "zenMode.hideLineNumbers": false,
     "zenMode.centerLayout": false,
@@ -176,8 +195,23 @@
     /* ────────────────────────────────────────────────────────────────────────── */
     "html.autoClosingTags": true,
     "javascript.autoClosingTags": true,
-    "jsonc]": {
+    "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "[lua]": {
+        "editor.defaultFormatter": "sumneko.lua"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
     },
     /* ─────────────────────────────── TypeScript ─────────────────────────────── */
     "typescript.autoClosingTags": true,
@@ -194,7 +228,7 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "[javascript]": {
         "editor.maxTokenizationLineLength": 2500,
-        "editor.defaultFormatter": "biomejs.biome"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
@@ -212,11 +246,13 @@
         "highlightedyank",
         "hlsearch",
         "Jetbrains",
+        "keybinds",
         "mhiri",
         "Mhirii",
         "neovim",
         "quickfix",
         "rgba",
+        "spawncmd",
         "vsvim",
         "whichkey"
     ],
@@ -232,9 +268,15 @@
         "/home/mhiri/Documents",
         "/home/mhiri/projects",
         "/home/mhiri/Repos/Mhirii",
-        "/home/mhiri/.config/vscode-neovim"
+        "/home/mhiri/.config/vscode-neovim",
+        "/home/mhirii/.config/qtile",
+        "/home/mhirii/.config/awesome",
+        "/home/mhirii/.config/hypr"
     ],
     "projectManager.sortList": "Recent",
+    "projectManager.vscode.baseFolders": [
+        "/home/mhiri/code",
+    ],
     "projectManager.any.baseFolders": [
         "/home/mhiri/code",
         "/home/mhiri/projects",
@@ -247,6 +289,46 @@
     "comment-divider.lineFiller": "─",
     "comment-divider.mainHeaderFiller": "─",
     "comment-divider.subheaderFiller": "─",
+    /* ──────────────────────────────── TODO TREE ─────────────────────────────── */
+    "todo-tree.general.showActivityBarBadge": true,
+    "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
+    "todo-tree.general.statusBar": "total",
+    /* ──────────────────────────────── Commands ──────────────────────────────── */
+    "runTerminalCommand.commands": [
+        {
+            "command": "pkill ags ; ags & disown ",
+            "auto": true,
+            "preserve": false,
+            // "group": "config"
+        },
+        {
+            "command": "ng g c ",
+            "name": "Generate Component"
+        },
+        {
+            "command": "tsc {resource}",
+            "auto": true
+        },
+        {
+            "command": "dotnet run",
+            "auto": true,
+            "group": ".NET Core"
+        },
+        {
+            "command": "dotnet add page -n ",
+            "group": ".NET Core"
+        },
+        {
+            "command": "dotnet watch run",
+            "auto": true,
+            "preserve": true,
+            "group": ".NET Core"
+        },
+        {
+            "command": "dotnet add package {clipboard}",
+            "auto": true,
+        },
+    ],
     /* ────────────────────────────────────────────────────────────────────────── */
     /*                                  Neovim                                   */
     /* ────────────────────────────────────────────────────────────────────────── */
@@ -259,10 +341,16 @@
     "whichkey.useFullWidthCharacters": true,
     "whichkey.bindings": [
         {
-            "key": "/",
-            "name": "Comment line",
+            "key": ",",
+            "name": "Find Files",
             "type": "command",
-            "command": "editor.action.commentLine"
+            "command": "workbench.action.quickOpen"
+        },
+        {
+            "key": "/",
+            "name": "Find Text In Files",
+            "type": "command",
+            "command": "workbench.action.findInFiles"
         },
         {
             "key": ";",
@@ -289,7 +377,7 @@
             "command": "actions.find"
         },
         {
-            "key": "H",
+            "key": "-",
             "name": "Horizontal split",
             "type": "command",
             "command": "workbench.action.splitEditorDown"
@@ -320,7 +408,13 @@
             "command": "workbench.action.togglePanel"
         },
         {
-            "key": "V",
+            "key": "S",
+            "name": "Surround Selection",
+            "type": "command",
+            "command": "extension.surroundSelection"
+        },
+        {
+            "key": "|",
             "name": "Vertical split",
             "type": "command",
             "command": "workbench.action.splitEditor"
@@ -350,6 +444,12 @@
                     "command": "editor.action.quickFix"
                 },
                 {
+                    "key": "b",
+                    "name": "Comment box",
+                    "type": "command",
+                    "command": "comment-divider.makeMainHeader"
+                },
+                {
                     "key": "e",
                     "name": "Explain",
                     "type": "command",
@@ -376,8 +476,8 @@
             "type": "bindings",
             "bindings": [
                 {
-                    "key": "c",
-                    "name": "Close active editor",
+                    "key": "d",
+                    "name": "delete buffer",
                     "type": "command",
                     "command": "workbench.action.closeActiveEditor"
                 },
@@ -406,31 +506,10 @@
                     "command": "workbench.action.moveEditorToRightGroup"
                 },
                 {
-                    "key": "n",
-                    "name": "Next editor",
-                    "type": "command",
-                    "command": "workbench.action.nextEditor"
-                },
-                {
                     "key": "N",
                     "name": "New untitled file",
                     "type": "command",
                     "command": "workbench.action.files.newUntitledFile"
-                },
-                {
-                    "key": "p",
-                    "name": "Previous editor",
-                    "type": "command",
-                    "command": "workbench.action.previousEditor"
-                },
-                {
-                    "key": "P",
-                    "name": "Paste clipboard to buffer",
-                    "type": "commands",
-                    "commands": [
-                        "editor.action.selectAll",
-                        "editor.action.clipboardPasteAction"
-                    ]
                 },
                 {
                     "key": "s",
@@ -445,10 +524,22 @@
                     "command": "workbench.action.reopenClosedEditor"
                 },
                 {
-                    "key": "x",
-                    "name": "Close other editors",
+                    "key": "o",
+                    "name": "Close other buffers",
                     "type": "command",
                     "command": "workbench.action.closeOtherEditors"
+                },
+                {
+                    "key": "p",
+                    "name": "Pin buffer",
+                    "type": "command",
+                    "command": "workbench.action.pinEditor"
+                },
+                {
+                    "key": "P",
+                    "name": "Pin buffer",
+                    "type": "command",
+                    "command": "workbench.action.unpinEditor"
                 },
                 {
                     "key": "Y",
@@ -569,7 +660,7 @@
         /* ────────────────────────────────── Find ────────────────────────────────── */
         {
             "key": "f",
-            "name": "+Find",
+            "name": "+Find/File",
             "type": "bindings",
             "bindings": [
                 {
@@ -650,14 +741,14 @@
             "type": "bindings",
             "bindings": [
                 {
-                    "key": "L",
+                    "key": "l",
                     "name": "All Bookmarks List",
                     "type": "command",
                     "command": "bookmarks.listFromAllFiles"
                 },
                 {
-                    "key": "l",
-                    "name": "Bookmarks List",
+                    "key": "L",
+                    "name": "Current Buffer Bookmarks List",
                     "type": "command",
                     "command": "bookmarks.list"
                 },
@@ -672,7 +763,19 @@
                     "name": "Toggle Bookmarks",
                     "type": "command",
                     "command": "bookmarks.toggleLabeled"
-                }
+                },
+                {
+                    "key": "d",
+                    "name": "delete Bookmarks in buffer",
+                    "type": "command",
+                    "command": "bookmarks.clear"
+                },
+                {
+                    "key": "D",
+                    "name": "delete Bookmarks in all buffer",
+                    "type": "command",
+                    "command": "bookmarks.clearFromAllFiles"
+                },
             ]
         },
         /* ───────────────────────────────── Preview ──────────────────────────────── */
@@ -749,7 +852,7 @@
         /* ────────────────────────────────── Show ────────────────────────────────── */
         {
             "key": "s",
-            "name": "+Show",
+            "name": "+Show/Search",
             "type": "bindings",
             "bindings": [
                 {
@@ -802,9 +905,9 @@
                 },
                 {
                     "key": "t",
-                    "name": "Test",
+                    "name": "TODO",
                     "type": "command",
-                    "command": "workbench.view.extension.test"
+                    "command": "todo-tree-view.focus"
                 },
                 {
                     "key": "x",
@@ -1097,27 +1200,27 @@
     },
     // #endregion
     /* ────────────────────────────────────────────────────────────────────────── */
-    /*                                     AI                                     */
+    /*                                     AI                                   */
     /* ────────────────────────────────────────────────────────────────────────── */
     "codeium.enableConfig": {
         "*": true,
         "plaintext": true
     },
-    "workbench.colorTheme": "Tokyo Night Frameless",
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "console-ninja.featureSet": "Community",
-    "workbench.sideBar.location": "right",
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "biomejs.biome"
-    },
+    /* ────────────────────────────────────────────────────────────────────────── */
+    /*                                   Others                                   */
+    /* ────────────────────────────────────────────────────────────────────────── */
     "vite.browserType": "system",
     "vite.devCommand": "pnpm dev --host",
     "browse-lite.chromeExecutable": "/usr/bin/chromium",
-    "[vue]": {
-        "editor.defaultFormatter": "Vue.volar"
-    },
     "remote.SSH.enableRemoteCommand": true,
+    "javascript.format.semicolons": "insert",
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "vue.complete.casing.props": "autoCamel",
+    "git.autofetch": true,
+    "settingsSync.ignoredExtensions": [
+        "illixion.vscode-vibrancy-continued"
+    ],
+    "vite.autoStart": false,
+    "workbench.startupEditor": "none",
     /* ────────────────────────────────────────────────────────────────────────── */
 }

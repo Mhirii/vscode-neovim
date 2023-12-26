@@ -21,7 +21,7 @@ bind("n", "<C-l>", '<CMD>call VSCodeNotify("workbench.action.navigateRight")<CR>
 bind("x", "<C-l>", '<CMD>call VSCodeNotify("workbench.action.navigateRight")<CR>')
 
 -- Active editor
-bind("n", "<S-w>", '<CMD>call VSCodeNotify("workbench.action.closeActiveEditor")<CR>')
+-- bind("n", "<S-w>", '<CMD>call VSCodeNotify("workbench.action.closeActiveEditor")<CR>')
 -- bind('n', '<Tab>', '<CMD>call VSCodeNotify("workbench.action.nextEditor")<CR>')
 -- bind('n', '<S-Tab>', '<CMD>call VSCodeNotify("workbench.action.previousEditor")<CR>')
 -- bind("n", "<S-h>", '<CMD>call VSCodeNotify("workbench.action.moveEditorLeftInGroup")<CR>')

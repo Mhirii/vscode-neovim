@@ -1,5 +1,6 @@
 {
+  "comment-box.nvim": { "branch": "main", "commit": "6394c872257bdbf60ae31aa6096c4b86b6f4b844" },
   "hop.nvim": { "branch": "master", "commit": "df0b5b693ef8c3d414b5b85e4bc11cea99c4958d" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
-  "nvim-surround": { "branch": "main", "commit": "18016d6af52edc9f1c794dcf6665a26a2962d2ee" }
+  "mini.surround": { "branch": "main", "commit": "3c98c6be8028139a114081e06d2a9f1ac3f4b7fc" }
 }

@@ -1,114 +1,117 @@
 [
-  {
-    "key": "ctrl+o ctrl+g",
-    "command": "projectManager.listGitProjects#sideBarGit"
-  },
-  {
-    "key": "ctrl+o ctrl+d",
-    "command": "projectManager.listAnyProjects#sideBarAny"
-  },
-  {
-    "key": "ctrl+o ctrl+f",
-    "command": "projectManager.listFavoriteProjects#sideBarFavorites"
-  },
-  {
-    "key": "ctrl+=",
-    "command": "expand_region",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+-",
-    "command": "undo_expand_region",
-    "when": "editorTextFocus && editorHasSelection"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "workbench.files.action.focusfilesexplorer",
-    "when": "editortextfocus"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "ctrl+Alt+e",
-    "command": "workbench.action.toggleAuxiliaryBar"
-  },
-  {
-    "key": "ctrl+Alt+e",
-    "command": "workbench.action.focusAuxiliaryBar",
-    "when": "editortextfocus"
-  },
-  {
-    "key": "a",
-    "command": "explorer.newFile",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "r",
-    "command": "renameFile",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "c",
-    "command": "filesExplorer.copy",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "p",
-    "command": "filesExplorer.paste",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "d",
-    "command": "deleteFile",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "shift+space",
-    "command": "whichkey.show",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "workbench.action.focusNextGroup",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "command": "vscode-neovim.send",
-    "key": "ctrl+g",
-    "when": "editorTextFocus && neovim.mode != insert",
-    "args": "<C-g>"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "-expand_region",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "-workbench.action.files.newUntitledFile"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "-vscode-neovim.send-cmdline",
-    "when": "neovim.init && neovim.mode == 'cmdline'"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "-workbench.action.closeGroup",
-    "when": "activeEditorGroupEmpty && multipleEditorGroups"
-  },
-  {
-    "key": "ctrl+w",
-    "command": "-workbench.action.closeActiveEditor"
-  },
-  {
-    "key": "ctrl+shift+w",
-    "command": "-workbench.action.closeWindow"
-  },
-  {
-    "key": "alt+f4",
-    "command": "-workbench.action.closeWindow"
-  }
+	{
+		"key": "ctrl+o ctrl+g",
+		"command": "projectManager.listGitProjects#sideBarGit"
+	},
+	{
+		"key": "ctrl+o ctrl+d",
+		"command": "projectManager.listAnyProjects#sideBarAny"
+	},
+	{
+		"key": "ctrl+o ctrl+f",
+		"command": "projectManager.listFavoriteProjects#sideBarFavorites"
+	},
+	{
+		"key": "ctrl+=",
+		"command": "expand_region",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+-",
+		"command": "undo_expand_region",
+		"when": "editorTextFocus && editorHasSelection"
+	},
+	{
+		"key": "ctrl+e",
+		"command": "workbench.files.action.focusfilesexplorer",
+		"when": "editortextfocus"
+	},
+	{
+		"key": "ctrl+e",
+		"command": "workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "ctrl+Alt+e",
+		"command": "workbench.action.toggleAuxiliaryBar"
+	},
+	{
+		"key": "ctrl+Alt+e",
+		"command": "workbench.action.focusAuxiliaryBar",
+		"when": "editortextfocus"
+	},
+	{
+		"key": "a",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+		"key": "r",
+		"command": "renameFile",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+		"key": "c",
+		"command": "filesExplorer.copy",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+		"key": "p",
+		"command": "filesExplorer.paste",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+		"key": "d",
+		"command": "deleteFile",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+		"key": "shift+space",
+		"command": "whichkey.show"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "workbench.action.focusNextGroup",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+		"command": "vscode-neovim.send",
+		"key": "ctrl+g",
+		"when": "editorTextFocus && neovim.mode != insert",
+		"args": "<C-g>"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "-expand_region",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "-workbench.action.files.newUntitledFile"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "-vscode-neovim.send-cmdline",
+		"when": "neovim.init && neovim.mode == 'cmdline'"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "-workbench.action.closeGroup",
+		"when": "activeEditorGroupEmpty && multipleEditorGroups"
+	},
+	{
+		"key": "ctrl+w",
+		"command": "-workbench.action.closeActiveEditor"
+	},
+	{
+		"key": "ctrl+shift+w",
+		"command": "-workbench.action.closeWindow"
+	},
+	{
+		"key": "alt+f4",
+		"command": "-workbench.action.closeWindow"
+	},
+	{
+		"key": "ctrl+shift+q",
+		"command": "workbench.action.closeActiveEditor"
+	}
 ]

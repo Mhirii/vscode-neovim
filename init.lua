@@ -1,6 +1,2 @@
-require('core')
--- require('lsp')
-
-if vim.g.vscode then
-  require('vscode')
-end
+require("core")
+require("plugins.configs.hop")

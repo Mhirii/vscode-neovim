@@ -1,9 +1,9 @@
 local bind = vim.keymap.set
 
 if vim.g.vscode then
-  vim.g.mapleader = "<Tab>"
+	vim.g.mapleader = "<Tab>"
 else
-  vim.g.mapleader = " "
+	vim.g.mapleader = " "
 end
 
 -- Unbind 'K'
@@ -68,8 +68,12 @@ bind("n", "[b", '<CMD>call VSCodeNotify("workbench.action.previousEditor")<CR>')
 
 bind("n", "zi", '<CMD>call VSCodeNotify("editor.toggleFold")<CR>')
 
-bind("n", "<C-g>", "<CMD> HopWord <CR>")
-bind("n", "<leader>h", "<CMD> HopWord <CR>")
+bind("n", "<C-g>", "<CMD> HopCamelCase <CR>")
+bind("n", "<leader>h", "<CMD> HopCamelCase <CR>")
+bind("n", "s", "<NOP>")
+bind("n", "s", "<CMD>HopCamelCase<CR>")
+bind("n", "S", "<NOP>")
+bind("n", "S", "<CMD>HopChar2<CR>")
 
 bind("n", "m", '<CMD>call VSCodeNotify("bookmarks.toggleLabeled")<CR>')
 bind("n", "'", '<CMD>call VSCodeNotify("bookmarks.listFromAllFiles")<CR>')

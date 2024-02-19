@@ -1,117 +1,252 @@
 [
-	{
-		"key": "ctrl+o ctrl+g",
-		"command": "projectManager.listGitProjects#sideBarGit"
-	},
-	{
-		"key": "ctrl+o ctrl+d",
-		"command": "projectManager.listAnyProjects#sideBarAny"
-	},
-	{
-		"key": "ctrl+o ctrl+f",
-		"command": "projectManager.listFavoriteProjects#sideBarFavorites"
-	},
-	{
-		"key": "ctrl+=",
-		"command": "expand_region",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+-",
-		"command": "undo_expand_region",
-		"when": "editorTextFocus && editorHasSelection"
-	},
-	{
-		"key": "ctrl+e",
-		"command": "workbench.files.action.focusfilesexplorer",
-		"when": "editortextfocus"
-	},
-	{
-		"key": "ctrl+e",
-		"command": "workbench.action.toggleSidebarVisibility"
-	},
-	{
-		"key": "ctrl+Alt+e",
-		"command": "workbench.action.toggleAuxiliaryBar"
-	},
-	{
-		"key": "ctrl+Alt+e",
-		"command": "workbench.action.focusAuxiliaryBar",
-		"when": "editortextfocus"
-	},
-	{
-		"key": "a",
-		"command": "explorer.newFile",
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-	{
-		"key": "r",
-		"command": "renameFile",
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-	{
-		"key": "c",
-		"command": "filesExplorer.copy",
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-	{
-		"key": "p",
-		"command": "filesExplorer.paste",
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-	{
-		"key": "d",
-		"command": "deleteFile",
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-	{
-		"key": "shift+space",
-		"command": "whichkey.show"
-	},
-	{
-		"key": "ctrl+l",
-		"command": "workbench.action.focusNextGroup",
-		"when": "filesExplorerFocus && !inputFocus"
-	},
-	{
-		"command": "vscode-neovim.send",
-		"key": "ctrl+g",
-		"when": "editorTextFocus && neovim.mode != insert",
-		"args": "<C-g>"
-	},
-	{
-		"key": "ctrl+w",
-		"command": "-expand_region",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+n",
-		"command": "-workbench.action.files.newUntitledFile"
-	},
-	{
-		"key": "ctrl+n",
-		"command": "-vscode-neovim.send-cmdline",
-		"when": "neovim.init && neovim.mode == 'cmdline'"
-	},
-	{
-		"key": "ctrl+w",
-		"command": "-workbench.action.closeGroup",
-		"when": "activeEditorGroupEmpty && multipleEditorGroups"
-	},
-	{
-		"key": "ctrl+w",
-		"command": "-workbench.action.closeActiveEditor"
-	},
-	{
-		"key": "ctrl+shift+w",
-		"command": "-workbench.action.closeWindow"
-	},
-	{
-		"key": "alt+f4",
-		"command": "-workbench.action.closeWindow"
-	},
-	{
-		"key": "ctrl+shift+q",
-		"command": "workbench.action.closeActiveEditor"
-	}
+  {
+    "key": "ctrl+o ctrl+g",
+    "command": "projectManager.listGitProjects#sideBarGit"
+  },
+  {
+    "key": "ctrl+o ctrl+d",
+    "command": "projectManager.listAnyProjects#sideBarAny"
+  },
+  {
+    "key": "ctrl+o ctrl+f",
+    "command": "projectManager.listFavoriteProjects#sideBarFavorites"
+  },
+  {
+    "key": "ctrl+=",
+    "command": "expand_region",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "undo_expand_region",
+    "when": "editorTextFocus && editorHasSelection"
+  },
+  {
+    "key": "Alt+e",
+    "command": "workbench.files.action.focusfilesexplorer",
+    "when": "editortextfocus"
+  },
+  {
+    "key": "Alt+e",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "Alt+c",
+    "command": "workbench.panel.chat.view.copilot.focus"
+  },
+  {
+    "key": "ctrl+Alt+e",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "ctrl+Alt+e",
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "editortextfocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "c",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+space",
+    "command": "whichkey.show"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusNextGroup",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "vscode-neovim.send",
+    "key": "ctrl+g",
+    "when": "editorTextFocus && neovim.mode != insert",
+    "args": "<C-g>"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-vscode-neovim.send-cmdline",
+    "when": "neovim.init && neovim.mode == 'cmdline'"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "-workbench.action.closeWindow"
+  },
+  {
+    "key": "alt+f4",
+    "command": "-workbench.action.closeWindow"
+  },
+  {
+    "key": "ctrl+shift+q",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "alt+i",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "alt+g",
+    "command": "binocular.customCommands",
+    "args": "Lazygit"
+  },
+  // TMUX
+  {
+    "key": "alt+space c",
+    "command": "workbench.action.terminal.newInActiveWorkspace",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space shift+5",
+    "command": "workbench.action.terminal.split",
+    "args": "terminalFocus && panelPosition == 'bottom'"
+  },
+  {
+    "key": "alt+space shift+'",
+    "command": "workbench.action.terminal.split",
+    "args": "terminalFocus && panelPosition != 'bottom'"
+  },
+  {
+    "key": "alt+space x",
+    "command": "workbench.action.terminal.kill",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space alt+k",
+    "command": "workbench.action.terminal.resizePaneUp",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space alt+j",
+    "command": "workbench.action.terminal.resizePaneDown",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space alt+h",
+    "command": "workbench.action.terminal.resizePaneLeft",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space alt+l",
+    "command": "workbench.action.terminal.resizePaneRight",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space alt+space",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space d",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space w",
+    "command": "workbench.action.quickOpenTerm",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space z",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "shift+right",
+    "command": "workbench.action.terminal.focusNext",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "shift+left",
+    "command": "workbench.action.terminal.focusPrevious",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "args": "terminalFocus && panelPosition == 'bottom'"
+  },
+  {
+    "key": "alt+space h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "args": "terminalFocus && panelPosition == 'bottom'"
+  },
+  {
+    "key": "alt+space j",
+    "command": "workbench.action.terminal.focusNextPane",
+    "args": "terminalFocus && panelPosition != 'bottom'"
+  },
+  {
+    "key": "alt+space k",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "args": "terminalFocus && panelPosition != 'bottom'"
+  },
+  {
+    "key": "alt+space 1",
+    "command": "workbench.action.terminal.focusAtIndex1",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space 2",
+    "command": "workbench.action.terminal.focusAtIndex2",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space 3",
+    "command": "workbench.action.terminal.focusAtIndex3",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space 4",
+    "command": "workbench.action.terminal.focusAtIndex4",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space 5",
+    "command": "workbench.action.terminal.focusAtIndex5",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space 6",
+    "command": "workbench.action.terminal.focusAtIndex6",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space 7",
+    "command": "workbench.action.terminal.focusAtIndex7",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space 8",
+    "command": "workbench.action.terminal.focusAtIndex8",
+    "args": "terminalFocus"
+  },
+  {
+    "key": "alt+space 9",
+    "command": "workbench.action.terminal.focusAtIndex9",
+    "args": "terminalFocus"
+  },
 ]

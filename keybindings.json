@@ -39,6 +39,10 @@
     "command": "workbench.action.toggleAuxiliaryBar"
   },
   {
+    "key": "ctrl+alt+s",
+    "command": "outline-map-view.focus",
+  },
+  {
     "key": "ctrl+Alt+e",
     "command": "workbench.action.focusAuxiliaryBar",
     "when": "editortextfocus"

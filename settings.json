@@ -13,7 +13,7 @@
     "editor.formatOnSave": true,
     "editor.guides.bracketPairs": false,
     "editor.guides.indentation": false,
-    "editor.inlayHints.enabled": "on",
+    "editor.inlayHints.enabled": "offUnlessPressed",
     "editor.lineNumbers": "relative",
     "editor.linkedEditing": true,
     "editor.minimap.renderCharacters": false,
@@ -71,91 +71,91 @@
         }
     },
     "breadcrumbs.filePath": "last",
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "scope": [
-                    "keyword",
-                    "keyword.control",
-                    "keyword.operator",
-                    "keyword.other.template",
-                    "keyword.other.substitution",
-                    "storage.type.function.arrow",
-                    "constant.other.color",
-                    "punctuation.accessor",
-                    "entity.name.section",
-                    "markdown.heading",
-                    "markup.inline.raw punctuation.definition.raw",
-                    "markup.heading",
-                    "storage.type.function.pug",
-                    "storage.type.function.python",
-                    "storage.type.annotation",
-                    "punctuation.bracket.angle",
-                    "keyword.other.new",
-                    "storage.type.generic.wildcard",
-                    "source.go keyword.operator",
-                    "constant.other.symbol.ruby punctuation.definition.constant.ruby",
-                    "variable.parameter",
-                    "support.function.builtin.rust",
-                    "storage.type.function.coffee",
-                    "entity.name.variable.parameter",
-                    "punctuation.separator.hash.cs",
-                    "constant.other.symbol.ruby punctuation.definition.constant.ruby",
-                    "constant.other.symbol.hashkey.ruby punctuation.definition.constant.ruby",
-                    "meta.function.parameters variable.other",
-                    "entity.name.type.annotation.kotlin",
-                    "storage.type.objc",
-                    "parameter.variable.function",
-                    "markup punctuation.definition",
-                    "punctuation.section.directive",
-                    "punctuation.definition.preprocessor",
-                    "source.ruby punctuation.definition.variable",
-                    "support.function.textbf",
-                    "source.graphql support.type.builtin",
-                    "source.ocaml variable.interpolation string",
-                    "entity.name.function.definition.special.constructor",
-                    "entity.name.function.definition.special.member.destructor.",
-                    "meta.function.parameters variable punctuation.definition.variable.php",
-                    "source.wsd keyword.other.activity",
-                    "keyword.control.class.ruby",
-                    "keyword.control.def.ruby",
-                    "keyword.function.go",
-                    "keyword.other.fn.rust",
-                    "markup.other.anchor",
-                    "markup.list.bullet",
-                    "markup.list punctuation.definition",
-                    "keyword.control.default",
-                    "punctuation.section",
-                    "punctuation.separator",
-                    "punctuation.terminator",
-                    "markup.bold.markdown",
-                    "source.zig storage.type.function"
-                ],
-                "settings": {
-                    "fontStyle": "bold"
-                }
-            },
-            {
-                "scope": [
-                    "markup.quote markup.bold",
-                    "text.html punctuation.section.embedded",
-                    "variable.other.c",
-                    "storage.modifier.lifetime.rust",
-                    "entity.name.lifetime.rust",
-                    "source.rust meta.attribute.rust",
-                    "meta.attribute.id entity.other.attribute-name",
-                    "source.ocaml punctuation.definition.tag emphasis",
-                    "source.tf entity.name",
-                    "markup.quote punctuation.definition",
-                    "markup.fenced_code punctuation.definition",
-                    "fenced_code.block.language"
-                ],
-                "settings": {
-                    "fontStyle": "bold"
-                }
-            }
-        ]
-    },
+    // "editor.tokenColorCustomizations": {
+    //     "textMateRules": [
+    //         {
+    //             "scope": [
+    //                 "keyword",
+    //                 "keyword.control",
+    //                 "keyword.operator",
+    //                 "keyword.other.template",
+    //                 "keyword.other.substitution",
+    //                 "storage.type.function.arrow",
+    //                 "constant.other.color",
+    //                 "punctuation.accessor",
+    //                 "entity.name.section",
+    //                 "markdown.heading",
+    //                 "markup.inline.raw punctuation.definition.raw",
+    //                 "markup.heading",
+    //                 "storage.type.function.pug",
+    //                 "storage.type.function.python",
+    //                 "storage.type.annotation",
+    //                 "punctuation.bracket.angle",
+    //                 "keyword.other.new",
+    //                 "storage.type.generic.wildcard",
+    //                 "source.go keyword.operator",
+    //                 "constant.other.symbol.ruby punctuation.definition.constant.ruby",
+    //                 "variable.parameter",
+    //                 "support.function.builtin.rust",
+    //                 "storage.type.function.coffee",
+    //                 "entity.name.variable.parameter",
+    //                 "punctuation.separator.hash.cs",
+    //                 "constant.other.symbol.ruby punctuation.definition.constant.ruby",
+    //                 "constant.other.symbol.hashkey.ruby punctuation.definition.constant.ruby",
+    //                 "meta.function.parameters variable.other",
+    //                 "entity.name.type.annotation.kotlin",
+    //                 "storage.type.objc",
+    //                 "parameter.variable.function",
+    //                 "markup punctuation.definition",
+    //                 "punctuation.section.directive",
+    //                 "punctuation.definition.preprocessor",
+    //                 "source.ruby punctuation.definition.variable",
+    //                 "support.function.textbf",
+    //                 "source.graphql support.type.builtin",
+    //                 "source.ocaml variable.interpolation string",
+    //                 "entity.name.function.definition.special.constructor",
+    //                 "entity.name.function.definition.special.member.destructor.",
+    //                 "meta.function.parameters variable punctuation.definition.variable.php",
+    //                 "source.wsd keyword.other.activity",
+    //                 "keyword.control.class.ruby",
+    //                 "keyword.control.def.ruby",
+    //                 "keyword.function.go",
+    //                 "keyword.other.fn.rust",
+    //                 "markup.other.anchor",
+    //                 "markup.list.bullet",
+    //                 "markup.list punctuation.definition",
+    //                 "keyword.control.default",
+    //                 "punctuation.section",
+    //                 "punctuation.separator",
+    //                 "punctuation.terminator",
+    //                 "markup.bold.markdown",
+    //                 "source.zig storage.type.function"
+    //             ],
+    //             "settings": {
+    //                 "fontStyle": "bold"
+    //             }
+    //         },
+    //         {
+    //             "scope": [
+    //                 "markup.quote markup.bold",
+    //                 "text.html punctuation.section.embedded",
+    //                 "variable.other.c",
+    //                 "storage.modifier.lifetime.rust",
+    //                 "entity.name.lifetime.rust",
+    //                 "source.rust meta.attribute.rust",
+    //                 "meta.attribute.id entity.other.attribute-name",
+    //                 "source.ocaml punctuation.definition.tag emphasis",
+    //                 "source.tf entity.name",
+    //                 "markup.quote punctuation.definition",
+    //                 "markup.fenced_code punctuation.definition",
+    //                 "fenced_code.block.language"
+    //             ],
+    //             "settings": {
+    //                 "fontStyle": "bold"
+    //             }
+    //         }
+    //     ]
+    // },
     "material-icon-theme.folders.theme": "specific",
     "a-file-icon-vscode.activeIconPacks": [
         "angular",
@@ -172,6 +172,13 @@
     "a-file-icon-vscode.folderTheme": "specific",
     "a-file-icon-vscode.opacity": 1,
     "a-file-icon-vscode.saturation": 1,
+    "editor.fontFamily": "'Monaspace Neon', monospace ,JetbrainsMono Nerd , Hack, 'FiraCode Nerd Font', 'monospace', monospace",
+    // "editor.fontLigatures": true,
+    "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
+    "editor.fontWeight": "500",
+    "editor.wordWrap": "on",
+    "editor.lineHeight": 24,
+    "editor.fontSize": 16,
     /* ─────────────────────────────────── Zen ────────────────────────────────── */
     "zenMode.hideLineNumbers": false,
     "zenMode.centerLayout": false,
@@ -179,22 +186,30 @@
     "zenMode.hideActivityBar": true,
     "zenMode.silentNotifications": true,
     "zenMode.restore": true,
-    "editor.fontFamily": "'Monaspace Neon', monospace ,JetbrainsMono Nerd , Hack, 'FiraCode Nerd Font', 'monospace', monospace",
-    // "editor.fontLigatures": true,
-    "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
-    "editor.fontWeight": "500",
-    "editor.lineHeight": 30,
-    "editor.wordWrap": "on",
+    /* ───────────────────────────────── Outline ──────────────────────────────── */
+    "outline.showArrays": false,
+    "outline.showBooleans": false,
+    "outline.showFields": false,
+    "outline.showKeys": false,
+    "outline.showProperties": false,
+    "outline.showConstants": false,
+    "outline.collapseItems": "alwaysCollapse",
+    "outline.icons": true,
+    "outline.problems.badges": true,
     /* ──────────────────────────────── Terminal ──────────────────────────────── */
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.customGlyphs": true,
     "terminal.integrated.enableImages": true,
-    "terminal.integrated.env.linux": {},
+    // "terminal.integrated.env.linux": {},
     "terminal.integrated.fontFamily": "MonaspiceNe Nerd Font",
     "terminal.integrated.gpuAcceleration": "auto",
     "terminal.integrated.smoothScrolling": true,
     "terminal.integrated.tabs.defaultColor": "terminal.ansiBlue",
+    "terminal.integrated.shellIntegration.decorationsEnabled": "gutter",
+    "terminal.integrated.shellIntegration.enabled": true,
+    "terminal.integrated.shellIntegration.suggestEnabled": true,
+    "terminal.external.linuxExec": "xterm",
     // ────────────────────────────────────────────────────────────────────────── }
     //                                  LSP                                 
     // ────────────────────────────────────────────────────────────────────────── {
@@ -202,9 +217,6 @@
     "javascript.autoClosingTags": true,
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[python]": {
-        "editor.defaultFormatter": "charliermarsh.ruff"
     },
     "[lua]": {
         "editor.defaultFormatter": "sumneko.lua"
@@ -219,13 +231,20 @@
         "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
     },
     /* ─────────────────────────────── TypeScript ─────────────────────────────── */
+    "javascript.format.semicolons": "insert",
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
     "typescript.autoClosingTags": true,
     "typescript.check.npmIsInstalled": true,
+    "typescript.experimental.aiCodeActions": {
+        "extractConstant": true,
+        "inferAndAddTypes": true,
+        "extractInterface": true
+    },
+    "typescript.inlayHints.enumMemberValues.enabled": false,
     "typescript.disableAutomaticTypeAcquisition": false,
-    "typescript.experimental.aiQuickFix": true,
     "typescript.experimental.tsserver.web.typeAcquisition.enabled": true,
     "typescript.format.enable": true,
-    "typescript.implementationsCodeLens.enabled": true,
+    "typescript.implementationsCodeLens.enabled": false,
     "typescript.preferences.importModuleSpecifier": "non-relative",
     "typescript.referencesCodeLens.enabled": false,
     "typescript.referencesCodeLens.showOnAllFunctions": true,
@@ -233,11 +252,11 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "[javascript]": {
         "editor.maxTokenizationLineLength": 2500,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+        "editor.defaultFormatter": "biomejs.biome"
     },
+    "typescript.format.semicolons": "insert",
     "biome_lsp.trace.server": "messages",
     "cSpell.userWords": [
         "Appwrite",
@@ -286,10 +305,9 @@
         "/home/mhiri/code",
     ],
     "projectManager.any.baseFolders": [
-        "/home/mhiri/code",
-        "/home/mhiri/projects",
-        "/home/mhiri/Documents",
-        "/home/mhiri/.config/ags"
+        "/home/mhiri/.config/ags",
+        "/home/mhiri/.config",
+        "/home/mhiri/scripts"
     ],
     "projectManager.any.maxDepthRecursion": 1,
     "projectManager.git.MaxDepthRecursion": 4,
@@ -665,6 +683,12 @@
                     "name": "Add to watch",
                     "type": "command",
                     "command": "editor.debug.action.selectionToWatch"
+                },
+                {
+                    "key": "v",
+                    "name": "Debug View",
+                    "type": "command",
+                    "command": "workbench.debug.welcome.focus"
                 }
             ]
         },
@@ -852,10 +876,10 @@
                     "command": "editor.action.previewDeclaration"
                 },
                 {
-                    "key": "t",
-                    "name": "Type Definition",
+                    "key": "f",
+                    "name": "Find file in projects",
                     "type": "command",
-                    "command": "editor.action.peekTypeDefinition"
+                    "command": "binocular.searchFileConfiguredFolders"
                 },
                 {
                     "key": "i",
@@ -864,16 +888,34 @@
                     "command": "editor.action.peekImplementation"
                 },
                 {
+                    "key": "l",
+                    "name": "Plugins",
+                    "type": "command",
+                    "command": "workbench.view.extensions"
+                },
+                {
+                    "key": "m",
+                    "name": "Project Manager",
+                    "type": "command",
+                    "command": "projectsExplorerFavorites.focus"
+                },
+                {
+                    "key": "p",
+                    "name": "Find directory in projects",
+                    "type": "command",
+                    "command": "binocular.searchDirectoryConfiguredFolders"
+                },
+                {
                     "key": "r",
                     "name": "Reference",
                     "type": "command",
                     "command": "references-view.showCallHierarchy"
                 },
                 {
-                    "key": "f",
-                    "name": "Find file in projects",
+                    "key": "t",
+                    "name": "Type Definition",
                     "type": "command",
-                    "command": "binocular.searchFileConfiguredFolders"
+                    "command": "editor.action.peekTypeDefinition"
                 },
                 {
                     "key": "/",
@@ -881,18 +923,6 @@
                     "type": "command",
                     "command": "binocular.searchContentConfiguredFolders"
                 },
-                {
-                    "key": "l",
-                    "name": "Plugins",
-                    "type": "command",
-                    "command": "workbench.view.extensions"
-                },
-                {
-                    "key": "p",
-                    "name": "Find directory in projects",
-                    "type": "command",
-                    "command": "binocular.searchDirectoryConfiguredFolders"
-                }
             ]
         },
         /* ──────────────────────────────── Refactor ──────────────────────────────── */
@@ -980,6 +1010,12 @@
                     "key": "o",
                     "name": "Output",
                     "type": "command",
+                    "command": "workbench.action.gotoSymbol"
+                },
+                {
+                    "key": "O",
+                    "name": "Output",
+                    "type": "command",
                     "command": "workbench.action.output.toggleOutput"
                 },
                 {
@@ -1045,6 +1081,12 @@
                     "command": "workbench.action.togglePanel"
                 },
                 {
+                    "key": "r",
+                    "name": "SSH View",
+                    "type": "command",
+                    "command": "remoteTargets.focus"
+                },
+                {
                     "key": "s",
                     "name": "Toggle sidebar",
                     "type": "command",
@@ -1052,9 +1094,15 @@
                 },
                 {
                     "key": "t",
-                    "name": "Toggle tabs",
+                    "name": "Todo View",
                     "type": "command",
-                    "command": "workbench.action.toggleTabsVisibility"
+                    "command": "workbench.view.extension.todo-tree-container"
+                },
+                {
+                    "key": "g",
+                    "name": "View Git Pod",
+                    "type": "command",
+                    "command": "workbench.view.extension.gitpod-view"
                 },
                 {
                     "key": "h",
@@ -1306,12 +1354,11 @@
     // ────────────────────────────────────────────────────────────────────────── }
     //                                   Others                                   
     // ────────────────────────────────────────────────────────────────────────── {
+    "gitlens.codeLens.enabled": false,
     "vite.browserType": "system",
     "vite.devCommand": "pnpm dev --host",
     "browse-lite.chromeExecutable": "/usr/bin/chromium",
     "remote.SSH.enableRemoteCommand": true,
-    "javascript.format.semicolons": "insert",
-    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
     "vue.complete.casing.props": "autoCamel",
     "git.autofetch": true,
     "settingsSync.ignoredExtensions": [
@@ -1319,7 +1366,8 @@
         "dsznajder.es7-react-js-snippets",
         "manucodes.nestjs-snippets",
         "miguelsolorio.fluent-icons",
-        "blackboxapp.blackbox"
+        "blackboxapp.blackbox",
+        "gerrnperl.outline-map"
     ],
     "vite.autoStart": false,
     "workbench.startupEditor": "none",
@@ -1353,17 +1401,16 @@
         "#47b2d1"
     ],
     "editor.smoothScrolling": true,
-    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.vertical": "visible",
     "editor.minimap.enabled": false,
     "workbench.preferredDarkColorTheme": "Rosé Pine (no italics)",
     "workbench.preferredLightColorTheme": "Tokyo Night Frameless",
     "zenMode.hideStatusBar": false,
-    "zenMode.showTabs": "none",
     "remote.SSH.remotePlatform": {
         "desktop": "linux"
     },
     "git.openRepositoryInParentFolders": "never",
-    "workbench.colorTheme": "Idx Dark Theme",
+    "workbench.colorTheme": "Tokyo Night Frameless",
     "CodeGPT.Autocomplete.enabled": true,
     "CodeGPT.Autocomplete.provider": "Ollama - deepseek-coder:base",
     "CodeGPT.apiKey": "Google AI Studio",
@@ -1372,7 +1419,7 @@
         "gitpod.gitpod-remote-ssh"
     ],
     "tabnine.experimentalAutoImports": true,
-    /* ─────────────────────────────────── APC ────────────────────────────────── */
+    /* ─────────────────────────────────── apc ────────────────────────────────── */
     "apc.electron": {
         "frame": false,
         "titleBarStyle": "hiddenInset",
@@ -1380,16 +1427,84 @@
     },
     "apc.statusBar": {
         "position": "editor-bottom",
-        "height": 20,
-        "fontSize": 14
+        "height": 22,
+        "fontSize": 12
     },
     "apc.menubar.compact": true,
+    "apc.sidebar.titlebar": {
+        "fontSize": 10,
+        "height": 24
+    },
+    "apc.font.family": "MonaspiceNe Nerd Font",
+    "apc.monospace.font.family": "MonaspiceNe Nerd Font",
+    "apc.header": {
+        "compact": 20,
+        "default": 25,
+        "fontSize": 14,
+        "height": 20
+    },
+    "apc.parts.font.family": {
+        "statusbar": "RobotoMono Nerd Font",
+        "auxiliarybar": "RobotoMono Nerd Font",
+        "panel": "RobotoMono Nerd Font",
+        "tabs": "RobotoMono Nerd Font",
+        "sidebar": "RobotoMono Nerd Font",
+        "titlebar": "RobotoMono Nerd Font",
+    },
     "apc.activityBar": {
-        "size": 50, // Height (when top/bottom) or width (in default position)
-        "itemSize": 50, // Size of items within the bar (default: size)
+        "size": 45, // Height (when top/bottom) or width (in default position)
+        "itemSize": 45, // Size of items within the bar (default: size)
         "itemMargin": 1 // Margin between two items (default: 3)
     },
-    "redhat.telemetry.enabled": false
+    "redhat.telemetry.enabled": false,
+    "workbench.tree.enableStickyScroll": false,
+    "editor.stickyScroll.enabled": false,
+    "peacock.favoriteColors": [
+        {
+            "name": "Angular Red",
+            "value": "#dd0531"
+        },
+        {
+            "name": "Azure Blue",
+            "value": "#007fff"
+        },
+        {
+            "name": "JavaScript Yellow",
+            "value": "#f9e64f"
+        },
+        {
+            "name": "Mandalorian Blue",
+            "value": "#1857a4"
+        },
+        {
+            "name": "Node Green",
+            "value": "#215732"
+        },
+        {
+            "name": "React Blue",
+            "value": "#61dafb"
+        },
+        {
+            "name": "Something Different",
+            "value": "#832561"
+        },
+        {
+            "name": "Svelte Orange",
+            "value": "#ff3d00"
+        },
+        {
+            "name": "Vue Green",
+            "value": "#42b883"
+        }
+    ],
+    "[json]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[ignore]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "gitlens.advanced.externalDiffTool": "nvimdiff",
+    "editor.foldingImportsByDefault": true,
     /* ────────────────────────────────────────────────────────────────────────── */
     // TODO: Paste JSON as Code
     // TODO: change TODO comment colors

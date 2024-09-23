@@ -8,7 +8,7 @@
     },
     "breadcrumbs.enabled": false,
     "diffEditor.wordWrap": "off",
-    "editor.cursorBlinking": "solid",
+    "editor.cursorBlinking": "smooth",
     "editor.cursorWidth": 1,
     "editor.formatOnSave": true,
     "editor.guides.bracketPairs": false,
@@ -27,141 +27,13 @@
     "window.titleBarStyle": "native",
     "workbench.layoutControl.enabled": false,
     "workbench.sideBar.location": "right",
+    "workbench.tree.enableStickyScroll": false,
+    "editor.stickyScroll.enabled": false,
+    "workbench.startupEditor": "none",
     // ────────────────────────────────────────────────────────────────────────── }
     //                                 Appearance                                 
     // ────────────────────────────────────────────────────────────────────────── {
-    "workbench.colorCustomizations": {
-        "[Tokyo Night Frameless]": {
-            "editorGutter.background": "#00000000",
-            "editorLineNumber.activeForeground": "#7aa2f7ff",
-            "editorLineNumber.foreground": "#c0caf520",
-            "editorIndentGuide.background1": "#33467C01",
-            "editorIndentGuide.activeBackground1": "#363B5490",
-            "statusBarItem.offlineBackground": "#f7768e",
-        },
-        "[Tokyo Night Horizon]": {
-            "editorGutter.background": "#1A1B26",
-            "editorLineNumber.activeForeground": "#7aa2f7",
-            "editorLineNumber.foreground": "#a9b1d6",
-            "activityBar.background": "#1a1b26",
-            "menu.background": "#1a1b26",
-            "panel.background": "#1a1b26",
-            "statusBar.background": "#1a1b26",
-            "tab.activeBorder": "#7aa2f7",
-            "tab.activeBorderTop": "#f7768e",
-            "tab.activeBackground": "#1a1b26"
-        }
-    },
-    "editor.semanticTokenColorCustomizations": {
-        "[Tokyo Night Frameless]": {
-            "enabled": true,
-            "rules": {
-                "keyword": {
-                    "fontStyle": "bold"
-                },
-            }
-        },
-        "[Dark Decay]": {
-            "enabled": true,
-            "rules": {
-                "keyword": {
-                    "fontStyle": "bold"
-                }
-            }
-        }
-    },
     "breadcrumbs.filePath": "last",
-    // "editor.tokenColorCustomizations": {
-    //     "textMateRules": [
-    //         {
-    //             "scope": [
-    //                 "keyword",
-    //                 "keyword.control",
-    //                 "keyword.operator",
-    //                 "keyword.other.template",
-    //                 "keyword.other.substitution",
-    //                 "storage.type.function.arrow",
-    //                 "constant.other.color",
-    //                 "punctuation.accessor",
-    //                 "entity.name.section",
-    //                 "markdown.heading",
-    //                 "markup.inline.raw punctuation.definition.raw",
-    //                 "markup.heading",
-    //                 "storage.type.function.pug",
-    //                 "storage.type.function.python",
-    //                 "storage.type.annotation",
-    //                 "punctuation.bracket.angle",
-    //                 "keyword.other.new",
-    //                 "storage.type.generic.wildcard",
-    //                 "source.go keyword.operator",
-    //                 "constant.other.symbol.ruby punctuation.definition.constant.ruby",
-    //                 "variable.parameter",
-    //                 "support.function.builtin.rust",
-    //                 "storage.type.function.coffee",
-    //                 "entity.name.variable.parameter",
-    //                 "punctuation.separator.hash.cs",
-    //                 "constant.other.symbol.ruby punctuation.definition.constant.ruby",
-    //                 "constant.other.symbol.hashkey.ruby punctuation.definition.constant.ruby",
-    //                 "meta.function.parameters variable.other",
-    //                 "entity.name.type.annotation.kotlin",
-    //                 "storage.type.objc",
-    //                 "parameter.variable.function",
-    //                 "markup punctuation.definition",
-    //                 "punctuation.section.directive",
-    //                 "punctuation.definition.preprocessor",
-    //                 "source.ruby punctuation.definition.variable",
-    //                 "support.function.textbf",
-    //                 "source.graphql support.type.builtin",
-    //                 "source.ocaml variable.interpolation string",
-    //                 "entity.name.function.definition.special.constructor",
-    //                 "entity.name.function.definition.special.member.destructor.",
-    //                 "meta.function.parameters variable punctuation.definition.variable.php",
-    //                 "source.wsd keyword.other.activity",
-    //                 "keyword.control.class.ruby",
-    //                 "keyword.control.def.ruby",
-    //                 "keyword.function.go",
-    //                 "keyword.other.fn.rust",
-    //                 "markup.other.anchor",
-    //                 "markup.list.bullet",
-    //                 "markup.list punctuation.definition",
-    //                 "keyword.control.default",
-    //                 "punctuation.section",
-    //                 "punctuation.separator",
-    //                 "punctuation.terminator",
-    //                 "markup.bold.markdown",
-    //                 "source.zig storage.type.function"
-    //             ],
-    //             "settings": {
-    //                 "fontStyle": "bold"
-    //             }
-    //         },
-    //         {
-    //             "scope": [
-    //                 "markup.quote markup.bold",
-    //                 "text.html punctuation.section.embedded",
-    //                 "variable.other.c",
-    //                 "storage.modifier.lifetime.rust",
-    //                 "entity.name.lifetime.rust",
-    //                 "source.rust meta.attribute.rust",
-    //                 "meta.attribute.id entity.other.attribute-name",
-    //                 "source.ocaml punctuation.definition.tag emphasis",
-    //                 "source.tf entity.name",
-    //                 "markup.quote punctuation.definition",
-    //                 "markup.fenced_code punctuation.definition",
-    //                 "fenced_code.block.language"
-    //             ],
-    //             "settings": {
-    //                 "fontStyle": "bold"
-    //             }
-    //         }
-    //     ]
-    // },
-    "material-icon-theme.folders.theme": "specific",
-    "a-file-icon-vscode.activeIconPacks": [
-        "angular",
-        "nest",
-        "rails"
-    ],
     "a-file-icon-vscode.arrowTheme": "material",
     "a-file-icon-vscode.filesAssociations": {
         "*.ts": "typescript",
@@ -218,9 +90,6 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "[lua]": {
-        "editor.defaultFormatter": "sumneko.lua"
-    },
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -235,14 +104,8 @@
     "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
     "typescript.autoClosingTags": true,
     "typescript.check.npmIsInstalled": true,
-    "typescript.experimental.aiCodeActions": {
-        "extractConstant": true,
-        "inferAndAddTypes": true,
-        "extractInterface": true
-    },
     "typescript.inlayHints.enumMemberValues.enabled": false,
     "typescript.disableAutomaticTypeAcquisition": false,
-    "typescript.experimental.tsserver.web.typeAcquisition.enabled": true,
     "typescript.format.enable": true,
     "typescript.implementationsCodeLens.enabled": false,
     "typescript.preferences.importModuleSpecifier": "non-relative",
@@ -259,28 +122,9 @@
     "typescript.format.semicolons": "insert",
     "biome_lsp.trace.server": "messages",
     "cSpell.userWords": [
-        "Appwrite",
-        "asvetliakov",
-        "Codeium",
-        "drawio",
-        "Elysia",
-        "esbenp",
-        "Fira",
-        "foldfix",
-        "hediet",
-        "highlightedyank",
-        "hlsearch",
-        "Jetbrains",
-        "keybinds",
         "mhiri",
         "Mhirii",
         "neovim",
-        "nuxt",
-        "nuxtjs",
-        "quickfix",
-        "rgba",
-        "spawncmd",
-        "vsvim",
         "whichkey"
     ],
     "editor.suggest.showReferences": true,
@@ -291,61 +135,55 @@
     "unocss.root": "packages/client",
     /* ───────────────────────────── Project Manager ──────────────────────────── */
     "projectManager.git.baseFolders": [
-        "/home/mhiri/code",
-        "/home/mhiri/Documents",
         "/home/mhiri/projects",
-        "/home/mhiri/Repos/Mhirii",
         "/home/mhiri/.config/vscode-neovim",
-        "/home/mhirii/.config/qtile",
-        "/home/mhirii/.config/awesome",
-        "/home/mhirii/.config/hypr"
     ],
     "projectManager.sortList": "Recent",
-    "projectManager.vscode.baseFolders": [
-        "/home/mhiri/code",
-    ],
-    "projectManager.any.baseFolders": [
-        "/home/mhiri/.config/ags",
-        "/home/mhiri/.config",
-        "/home/mhiri/scripts"
-    ],
+    "projectManager.vscode.baseFolders": [],
+    "projectManager.any.baseFolders": [],
     "projectManager.any.maxDepthRecursion": 1,
-    "projectManager.git.MaxDepthRecursion": 4,
-    /* ───────────────────────────── Comment Divider ──────────────────────────── */
-    "comment-divider.lineFiller": "─",
-    "comment-divider.mainHeaderFiller": "─",
-    "comment-divider.subheaderFiller": "─",
+    "projectManager.git.maxDepthRecursion": 4,
     /* ──────────────────────────────── TODO TREE ─────────────────────────────── */
+    // TODO: hello
     "todo-tree.general.showActivityBarBadge": true,
     "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
     "todo-tree.general.statusBar": "total",
-    /* ──────────────────────────────── Binocular ─────────────────────────────── */
-    "binocular.general.additionalSearchLocations": [
-        "~/projects",
+    "todo-tree.highlights.enabled": true,
+    "todo-tree.highlights.useColourScheme": true,
+    "todo-tree.general.tags": [
+        "BUG",
+        "FIXME",
+        "HACK",
+        "INFO",
+        "TODO",
+        "[ ]",
+        "[x]",
     ],
-    "binocular.command.commands": [
-        //lazygit! :)
-        {
-            "shellCommand": "lazygit",
-            "commandIdentifier": "Lazygit"
-        },
-        // Search git log using the `git fuzzy` tool and checkout the selected one
-        {
-            "shellCommand": "git checkout $(git fuzzy log)",
-            "commandIdentifier": "Git fuzzy log"
-        },
-        // Search git log for the current file using the `git fuzzy` tool and checkout the selected one
-        {
-            "shellCommand": "git checkout $(git fuzzy log ${file})",
-            "commandIdentifier": "Git fuzzy log current file"
-        }
+    "todo-tree.tree.showCountsInTree": true,
+    "todo-tree.highlights.foregroundColourScheme": [
+        "black",
+        "black",
+        "black",
+        "black",
+        "black",
+        "black",
+        "black"
+    ],
+    "todo-tree.highlights.backgroundColourScheme": [
+        "#f5596b",
+        "#f5596b",
+        "#fa7a55",
+        "#0da8f2",
+        "#0da8f2",
+        "#47b2d1",
+        "#47b2d1"
     ],
     // ────────────────────────────────────────────────────────────────────────── } 
     //                                  Neovim                                  
     // ────────────────────────────────────────────────────────────────────────── {
-    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-    "vscode-neovim.NVIM_APPNAME": "vscode-neovim",
-    "vscode-neovim.neovimInitVimPaths.linux": "/home/mhiri/.config/vscode-neovim/init.lua",
+    "vscode-neovim.neovimExecutablePaths.linux": "/run/current-system/sw/bin/nvim",
+    "vscode-neovim.NVIM_APPNAME": "vscode-nvim",
+    "vscode-neovim.neovimInitVimPaths.linux": "/home/mhiri/.config/vscode-nvim/init.lua",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     },
@@ -708,13 +546,13 @@
                     "key": "f",
                     "name": "Find Files",
                     "type": "command",
-                    "command": "binocular.searchFile"
+                    "command": "fzf-quick-open.runFzfFilePwd"
                 },
                 {
-                    "key": "d",
-                    "name": "Find Directory",
+                    "key": "F",
+                    "name": "Find Files (root)",
                     "type": "command",
-                    "command": "binocular.searchDirectory"
+                    "command": "fzf-quick-open.runFzfFileProjectRoot"
                 },
                 {
                     "key": "s",
@@ -876,12 +714,6 @@
                     "command": "editor.action.previewDeclaration"
                 },
                 {
-                    "key": "f",
-                    "name": "Find file in projects",
-                    "type": "command",
-                    "command": "binocular.searchFileConfiguredFolders"
-                },
-                {
                     "key": "i",
                     "name": "Implementation",
                     "type": "command",
@@ -900,12 +732,6 @@
                     "command": "projectsExplorerFavorites.focus"
                 },
                 {
-                    "key": "p",
-                    "name": "Find directory in projects",
-                    "type": "command",
-                    "command": "binocular.searchDirectoryConfiguredFolders"
-                },
-                {
                     "key": "r",
                     "name": "Reference",
                     "type": "command",
@@ -916,12 +742,6 @@
                     "name": "Type Definition",
                     "type": "command",
                     "command": "editor.action.peekTypeDefinition"
-                },
-                {
-                    "key": "/",
-                    "name": "Find Text in projects",
-                    "type": "command",
-                    "command": "binocular.searchContentConfiguredFolders"
                 },
             ]
         },
@@ -1345,19 +1165,11 @@
     },
     // }
     // ────────────────────────────────────────────────────────────────────────── }
-    //                                     AI                                   
-    // ────────────────────────────────────────────────────────────────────────── {
-    "codeium.enableConfig": {
-        "*": true,
-        "plaintext": true
-    },
-    // ────────────────────────────────────────────────────────────────────────── }
     //                                   Others                                   
     // ────────────────────────────────────────────────────────────────────────── {
     "gitlens.codeLens.enabled": false,
     "vite.browserType": "system",
     "vite.devCommand": "pnpm dev --host",
-    "browse-lite.chromeExecutable": "/usr/bin/chromium",
     "remote.SSH.enableRemoteCommand": true,
     "vue.complete.casing.props": "autoCamel",
     "git.autofetch": true,
@@ -1370,133 +1182,20 @@
         "gerrnperl.outline-map"
     ],
     "vite.autoStart": false,
-    "workbench.startupEditor": "none",
-    "todo-tree.highlights.useColourScheme": true,
-    "todo-tree.general.tags": [
-        "BUG",
-        "FIXME",
-        "HACK",
-        "INFO",
-        "TODO",
-        "[ ]",
-        "[x]",
-    ],
-    "todo-tree.tree.showCountsInTree": true,
-    "todo-tree.highlights.foregroundColourScheme": [
-        "black",
-        "black",
-        "black",
-        "black",
-        "black",
-        "black",
-        "black"
-    ],
-    "todo-tree.highlights.backgroundColourScheme": [
-        "#f5596b",
-        "#f5596b",
-        "#fa7a55",
-        "#0da8f2",
-        "#0da8f2",
-        "#47b2d1",
-        "#47b2d1"
-    ],
     "editor.smoothScrolling": true,
     "editor.scrollbar.vertical": "visible",
     "editor.minimap.enabled": false,
-    "workbench.preferredDarkColorTheme": "Rosé Pine (no italics)",
-    "workbench.preferredLightColorTheme": "Tokyo Night Frameless",
     "zenMode.hideStatusBar": false,
     "remote.SSH.remotePlatform": {
-        "desktop": "linux"
+        "desktop": "linux",
+        "*.gitpod.io": "linux"
     },
     "git.openRepositoryInParentFolders": "never",
-    "workbench.colorTheme": "Tokyo Night Frameless",
-    "CodeGPT.Autocomplete.enabled": true,
-    "CodeGPT.Autocomplete.provider": "Ollama - deepseek-coder:base",
-    "CodeGPT.apiKey": "Google AI Studio",
-    "workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.iconTheme": "a-file-icon-vscode",
     "remote.SSH.defaultExtensions": [
         "gitpod.gitpod-remote-ssh"
     ],
-    "tabnine.experimentalAutoImports": true,
-    /* ─────────────────────────────────── apc ────────────────────────────────── */
-    "apc.electron": {
-        "frame": false,
-        "titleBarStyle": "hiddenInset",
-        "visualEffectState": "active"
-    },
-    "apc.statusBar": {
-        "position": "editor-bottom",
-        "height": 22,
-        "fontSize": 12
-    },
-    "apc.menubar.compact": true,
-    "apc.sidebar.titlebar": {
-        "fontSize": 10,
-        "height": 24
-    },
-    "apc.font.family": "MonaspiceNe Nerd Font",
-    "apc.monospace.font.family": "MonaspiceNe Nerd Font",
-    "apc.header": {
-        "compact": 20,
-        "default": 25,
-        "fontSize": 14,
-        "height": 20
-    },
-    "apc.parts.font.family": {
-        "statusbar": "RobotoMono Nerd Font",
-        "auxiliarybar": "RobotoMono Nerd Font",
-        "panel": "RobotoMono Nerd Font",
-        "tabs": "RobotoMono Nerd Font",
-        "sidebar": "RobotoMono Nerd Font",
-        "titlebar": "RobotoMono Nerd Font",
-    },
-    "apc.activityBar": {
-        "size": 45, // Height (when top/bottom) or width (in default position)
-        "itemSize": 45, // Size of items within the bar (default: size)
-        "itemMargin": 1 // Margin between two items (default: 3)
-    },
     "redhat.telemetry.enabled": false,
-    "workbench.tree.enableStickyScroll": false,
-    "editor.stickyScroll.enabled": false,
-    "peacock.favoriteColors": [
-        {
-            "name": "Angular Red",
-            "value": "#dd0531"
-        },
-        {
-            "name": "Azure Blue",
-            "value": "#007fff"
-        },
-        {
-            "name": "JavaScript Yellow",
-            "value": "#f9e64f"
-        },
-        {
-            "name": "Mandalorian Blue",
-            "value": "#1857a4"
-        },
-        {
-            "name": "Node Green",
-            "value": "#215732"
-        },
-        {
-            "name": "React Blue",
-            "value": "#61dafb"
-        },
-        {
-            "name": "Something Different",
-            "value": "#832561"
-        },
-        {
-            "name": "Svelte Orange",
-            "value": "#ff3d00"
-        },
-        {
-            "name": "Vue Green",
-            "value": "#42b883"
-        }
-    ],
     "[json]": {
         "editor.defaultFormatter": "biomejs.biome"
     },

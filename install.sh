@@ -275,8 +275,11 @@ echo_help() {
 #	================ main ================
 
 if [ "$#" -eq 0 ]; then
-	echo_help
-	safe_exit 0
+	if [ -f "./init.lua" ]; then
+		echo_help
+		safe_exit 0
+	fi
+	_all=true
 fi
 
 check_repo

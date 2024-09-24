@@ -7,26 +7,41 @@
 #
 
 #	=============== vars ===============
-repo="https://github.com/mhirii/vscode-neovim"
+repo_name="vscode-neovim"
+repo="https://github.com/mhirii/$repo_name"
 spinner=('⠋' '⠙' '⠹' '⠸' '⠼' '⠴' '⠦' '⠧' '⠇' '⠏')
 default_vscode_config="$HOME/.config/Code/User"
 SPIN_PID=""
 #	=============== mutable ===============
 nvim_path=""
-repo_path=""
-clone_path="$HOME/.config/vscode-nvim"
+clone_path="$HOME/.config/$repo_name"
+verbose=false
 #	=============== lib ===============
 echo_error() {
 	echo -e "\n\e[31m$1\e[0m"
 }
 echo_warning() {
-	echo -e "\n\e[33m$1\e[0m"
+	if $verbose; then
+		echo -e "\n\e[33m$1\e[0m"
+	fi
 }
 echo_success() {
-	echo -e "\n\e[32m$1\e[0m"
+	if $verbose; then
+		echo -e "\n\e[32m$1\e[0m"
+	fi
 }
 echo_info() {
-	echo -e "\n\e[34m$1\e[0m"
+	if $verbose; then
+		echo -e "\n\e[34m$1\e[0m"
+	fi
+}
+echo_announce() {
+	echo -e "\n\e[35m$1\e[0m"
+}
+
+ask_prompt() {
+	msg=$1
+	echo -e "\n\e[36m$msg\e[0m"
 }
 
 spin() {
@@ -56,6 +71,10 @@ safe_exit() {
 
 function run_with_spinner() {
 	local function_to_run=$1
+	if ! $verbose; then
+		$function_to_run
+		return
+	fi
 	spin &
 	SPIN_PID=$!
 	$function_to_run
@@ -85,11 +104,10 @@ clone_repo() {
 		echo_error "Failed to clone repository"
 		safe_exit 1
 	}
-	repo_path=$target
 }
 
 check_repo() {
-	target=$1
+	target=$clone_path
 	if [ ! -d "$target" ]; then
 		echo_warning "Repository not found"
 		clone_repo "$target" || {
@@ -173,12 +191,12 @@ init() {
 	echo_success "Neovim found at $nvim_path"
 
 	echo_info "Cloning repository"
-	check_repo "$clone_path"
+	check_repo
 	echo_success "Repository cloned successfully at $clone_path"
 }
 
 get_user_input() {
-	echo_warning "$1"
+	ask_prompt "$1"
 	read -p "y/n: " -n 1 -r
 	echo
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -205,7 +223,7 @@ create_symlink_with_backup() {
 }
 
 ask_extensions() {
-	echo_info "Do you want to install extensions from the repository?"
+	ask_prompt "Do you want to install extensions from the repository?"
 	read -p "y/n: " -n 1 -r
 	echo
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -226,7 +244,6 @@ ask_keybinds() {
 }
 
 apply_nvim_vscode() {
-	local repo_name="vscode-nvim"
 	local nvim_path="/run/current-system/sw/bin/nvim"
 	local nvim_exec_setting="vscode-neovim.neovimExecutablePaths.linux"
 	local nvim_appname_setting="vscode-neovim.NVIM_APPNAME"
@@ -256,6 +273,14 @@ echo_help() {
 }
 
 #	================ main ================
+
+if [ "$#" -eq 0 ]; then
+	echo_help
+	safe_exit 0
+fi
+
+check_repo
+
 cd "$(dirname "$0")" || {
 	safe_exit
 }
@@ -264,11 +289,6 @@ cd "$clone_path" || {
 	echo_error "Failed to cd into repository"
 	safe_exit 1
 }
-
-if [ "$#" -eq 0 ]; then
-	echo_help
-	safe_exit 0
-fi
 
 _all=false
 _ext=false
@@ -279,7 +299,7 @@ _nv=false
 while (("$#")); do
 	case "$1" in
 	a | all)
-		echo_info "Applying all settings"
+		echo_announce "Applying all settings"
 		_all=true
 		shift
 		;;
@@ -288,24 +308,27 @@ while (("$#")); do
 		safe_exit 0
 		;;
 	e | x | extensions)
-		echo_info "Applying extensions"
+		echo_announce "Applying extensions"
 		_ext=true
 		shift
 		;;
 	c | config)
-		echo_info "Applying config"
+		echo_announce "Applying config"
 		_conf=true
 		shift
 		;;
 	k | keybinds)
-		echo_info "Applying keybinds"
+		echo_announce "Applying keybinds"
 		_kb=true
 		shift
 		;;
 	n | v | nvim)
-		echo_info "Applying neovim settings"
+		echo_announce "Applying neovim settings"
 		_nv=true
 		shift
+		;;
+	V | verbose)
+		verbose=true
 		;;
 	*)
 		echo_error "Unknown option: $1"
@@ -314,6 +337,7 @@ while (("$#")); do
 		;;
 	esac
 done
+
 init
 
 if $_all; then
@@ -324,18 +348,34 @@ if $_all; then
 fi
 
 if $_ext; then
+	if $verbose; then
+		run_with_spinner install_ext
+		return
+	fi
 	install_ext
 fi
 
 if $_conf; then
+	if $verbose; then
+		run_with_spinner install_ext
+		return
+	fi
 	ask_config
 fi
 
 if $_kb; then
+	if $verbose; then
+		run_with_spinner install_ext
+		return
+	fi
 	ask_keybinds
 fi
 
 if $_nv; then
+	if $verbose; then
+		run_with_spinner install_ext
+		return
+	fi
 	ask_apply_nvim_vscode
 fi
 

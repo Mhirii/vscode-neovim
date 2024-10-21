@@ -16,7 +16,6 @@
     "editor.inlayHints.enabled": "offUnlessPressed",
     "editor.lineNumbers": "relative",
     "editor.linkedEditing": true,
-    "editor.minimap.renderCharacters": false,
     "editor.suggest.insertMode": "replace",
     "editor.tabSize": 2,
     "explorer.compactFolders": false,
@@ -51,6 +50,10 @@
     "editor.wordWrap": "on",
     "editor.lineHeight": 24,
     "editor.fontSize": 16,
+    "editor.smoothScrolling": true,
+    "editor.scrollbar.vertical": "auto",
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
     /* ─────────────────────────────────── Zen ────────────────────────────────── */
     "zenMode.hideLineNumbers": false,
     "zenMode.centerLayout": false,
@@ -82,23 +85,6 @@
     "terminal.integrated.shellIntegration.enabled": true,
     "terminal.integrated.shellIntegration.suggestEnabled": true,
     "terminal.external.linuxExec": "xterm",
-    // ────────────────────────────────────────────────────────────────────────── }
-    //                                  LSP                                 
-    // ────────────────────────────────────────────────────────────────────────── {
-    "html.autoClosingTags": true,
-    "javascript.autoClosingTags": true,
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[vue]": {
-        "editor.defaultFormatter": "Vue.volar"
-    },
-    "[scss]": {
-        "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
-    },
     /* ─────────────────────────────── TypeScript ─────────────────────────────── */
     "javascript.format.semicolons": "insert",
     "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
@@ -113,14 +99,7 @@
     "typescript.referencesCodeLens.showOnAllFunctions": true,
     "typescript.suggest.autoImports": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "[javascript]": {
-        "editor.maxTokenizationLineLength": 2500,
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "biomejs.biome"
-    },
     "typescript.format.semicolons": "insert",
-    "biome_lsp.trace.server": "messages",
     "cSpell.userWords": [
         "mhiri",
         "Mhirii",
@@ -128,11 +107,6 @@
         "whichkey"
     ],
     "editor.suggest.showReferences": true,
-    // ────────────────────────────────────────────────────────────────────────── }
-    //                                 Extensions                                 
-    // ────────────────────────────────────────────────────────────────────────── {
-    "extensions.ignoreRecommendations": true,
-    "unocss.root": "packages/client",
     /* ───────────────────────────── Project Manager ──────────────────────────── */
     "projectManager.git.baseFolders": [
         "/home/mhiri/projects",
@@ -181,25 +155,22 @@
     // ────────────────────────────────────────────────────────────────────────── } 
     //                                  Neovim                                  
     // ────────────────────────────────────────────────────────────────────────── {
-    "vscode-neovim.neovimExecutablePaths.linux": "/run/current-system/sw/bin/nvim",
-    "vscode-neovim.NVIM_APPNAME": "vscode-nvim",
-    "vscode-neovim.neovimInitVimPaths.linux": "/home/mhiri/.config/vscode-nvim/init.lua",
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    },
     "whichkey.useFullWidthCharacters": true,
+    "vim.sneak": true,
+    "vim.useSystemClipboard": true,
     "whichkey.bindings": [
         {
             "key": ",",
             "name": "Find Files",
             "type": "command",
             "command": "workbench.action.quickOpen"
+
         },
-        { // FIXME
+        {
             "key": "/",
             "name": "Grep",
             "type": "command",
-            "command": "fzf-quick-open.runFzfSearch"
+            "command": "workbench.action.showCommands"
         },
         {
             "key": ";",
@@ -236,13 +207,6 @@
             "name": "Horizontal split",
             "type": "command",
             "command": "workbench.action.splitEditorDown"
-        },
-        {
-            "key": "h",
-            "name": "Hop Word",
-            "type": "command",
-            "command": "vscode-neovim.send",
-            "args": "<C-g>",
         },
         {
             "key": "i",
@@ -546,13 +510,7 @@
                     "key": "f",
                     "name": "Find Files",
                     "type": "command",
-                    "command": "fzf-quick-open.runFzfFilePwd"
-                },
-                {
-                    "key": "F",
-                    "name": "Find Files (root)",
-                    "type": "command",
-                    "command": "fzf-quick-open.runFzfFileProjectRoot"
+                    "command": "workbench.action.quickOpen"
                 },
                 {
                     "key": "s",
@@ -578,13 +536,6 @@
                     "type": "command",
                     "command": "editor.action.format"
                 },
-                {
-                    "key": "w",
-                    "name": "Word Hop",
-                    "type": "command",
-                    "command": "vscode-neovim.send",
-                    "args": "<C-g>",
-                }
             ]
         },
         /* ───────────────────────────── Github Copilot ───────────────────────────── */
@@ -1168,8 +1119,6 @@
     //                                   Others                                   
     // ────────────────────────────────────────────────────────────────────────── {
     "gitlens.codeLens.enabled": false,
-    "vite.browserType": "system",
-    "vite.devCommand": "pnpm dev --host",
     "remote.SSH.enableRemoteCommand": true,
     "vue.complete.casing.props": "autoCamel",
     "git.autofetch": true,
@@ -1181,10 +1130,6 @@
         "blackboxapp.blackbox",
         "gerrnperl.outline-map"
     ],
-    "vite.autoStart": false,
-    "editor.smoothScrolling": true,
-    "editor.scrollbar.vertical": "visible",
-    "editor.minimap.enabled": false,
     "zenMode.hideStatusBar": false,
     "remote.SSH.remotePlatform": {
         "desktop": "linux",
@@ -1195,15 +1140,10 @@
     "remote.SSH.defaultExtensions": [
         "gitpod.gitpod-remote-ssh"
     ],
-    "redhat.telemetry.enabled": false,
-    "[json]": {
-        "editor.defaultFormatter": "biomejs.biome"
-    },
-    "[ignore]": {
-        "editor.defaultFormatter": "foxundermoon.shell-format"
-    },
     "gitlens.advanced.externalDiffTool": "nvimdiff",
     "editor.foldingImportsByDefault": true,
+    "github.copilot.editor.enableAutoCompletions": false,
+    "workbench.colorTheme": "IDX Monospace Dark Flat",
     /* ────────────────────────────────────────────────────────────────────────── */
     // TODO: Paste JSON as Code
     // TODO: change TODO comment colors

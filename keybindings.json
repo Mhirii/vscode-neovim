@@ -32,7 +32,7 @@
   },
   {
     "key": "Alt+c",
-    "command": "workbench.panel.chat.view.copilot.focus"
+    "command": "workbench.panel.chat.view.copilot.focus",
   },
   {
     "key": "ctrl+Alt+e",
@@ -82,19 +82,8 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "command": "vscode-neovim.send",
-    "key": "ctrl+g",
-    "when": "editorTextFocus && neovim.mode != insert",
-    "args": "<C-g>"
-  },
-  {
     "key": "ctrl+n",
     "command": "-workbench.action.files.newUntitledFile"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "-vscode-neovim.send-cmdline",
-    "when": "neovim.init && neovim.mode == 'cmdline'"
   },
   {
     "key": "ctrl+shift+w",
@@ -112,69 +101,64 @@
     "key": "alt+i",
     "command": "workbench.action.terminal.toggleTerminal"
   },
-  {
-    "key": "alt+g",
-    "command": "binocular.customCommands",
-    "args": "Lazygit"
-  },
   // TMUX
   {
-    "key": "alt+space c",
+    "key": "alt+d c",
     "command": "workbench.action.terminal.newInActiveWorkspace",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space shift+5",
+    "key": "alt+d shift+5",
     "command": "workbench.action.terminal.split",
     "args": "terminalFocus && panelPosition == 'bottom'"
   },
   {
-    "key": "alt+space shift+'",
+    "key": "alt+d shift+\\",
     "command": "workbench.action.terminal.split",
     "args": "terminalFocus && panelPosition != 'bottom'"
   },
   {
-    "key": "alt+space x",
+    "key": "alt+d x",
     "command": "workbench.action.terminal.kill",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space alt+k",
+    "key": "alt+d alt+k",
     "command": "workbench.action.terminal.resizePaneUp",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space alt+j",
+    "key": "alt+d alt+j",
     "command": "workbench.action.terminal.resizePaneDown",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space alt+h",
+    "key": "alt+d alt+h",
     "command": "workbench.action.terminal.resizePaneLeft",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space alt+l",
+    "key": "alt+d alt+l",
     "command": "workbench.action.terminal.resizePaneRight",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space alt+space",
+    "key": "alt+d alt+space",
     "command": "workbench.action.toggleSidebarVisibility",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space d",
+    "key": "alt+d d",
     "command": "workbench.action.terminal.toggleTerminal",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space w",
+    "key": "alt+d w",
     "command": "workbench.action.quickOpenTerm",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space z",
+    "key": "alt+d z",
     "command": "workbench.action.toggleMaximizedPanel",
     "args": "terminalFocus"
   },
@@ -189,67 +173,67 @@
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space l",
+    "key": "alt+d l",
     "command": "workbench.action.terminal.focusNextPane",
     "args": "terminalFocus && panelPosition == 'bottom'"
   },
   {
-    "key": "alt+space h",
+    "key": "alt+d h",
     "command": "workbench.action.terminal.focusPreviousPane",
     "args": "terminalFocus && panelPosition == 'bottom'"
   },
   {
-    "key": "alt+space j",
+    "key": "alt+d j",
     "command": "workbench.action.terminal.focusNextPane",
     "args": "terminalFocus && panelPosition != 'bottom'"
   },
   {
-    "key": "alt+space k",
+    "key": "alt+d k",
     "command": "workbench.action.terminal.focusPreviousPane",
     "args": "terminalFocus && panelPosition != 'bottom'"
   },
   {
-    "key": "alt+space 1",
+    "key": "alt+d 1",
     "command": "workbench.action.terminal.focusAtIndex1",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space 2",
+    "key": "alt+d 2",
     "command": "workbench.action.terminal.focusAtIndex2",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space 3",
+    "key": "alt+d 3",
     "command": "workbench.action.terminal.focusAtIndex3",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space 4",
+    "key": "alt+d 4",
     "command": "workbench.action.terminal.focusAtIndex4",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space 5",
+    "key": "alt+d 5",
     "command": "workbench.action.terminal.focusAtIndex5",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space 6",
+    "key": "alt+d 6",
     "command": "workbench.action.terminal.focusAtIndex6",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space 7",
+    "key": "alt+d 7",
     "command": "workbench.action.terminal.focusAtIndex7",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space 8",
+    "key": "alt+d 8",
     "command": "workbench.action.terminal.focusAtIndex8",
     "args": "terminalFocus"
   },
   {
-    "key": "alt+space 9",
+    "key": "alt+d 9",
     "command": "workbench.action.terminal.focusAtIndex9",
     "args": "terminalFocus"
   },
